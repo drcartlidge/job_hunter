@@ -37,3 +37,37 @@ companies:
   - name: Nearpod
     type: html
     url: "https://nearpod.com/careers"
+# Newly added
+  - name: Chegg
+    type: workday
+    org: chegg
+    url: "https://osv-chegg.wd5.myworkdayjobs.com/en-US/Chegg"
+  - name: Guild Education
+    type: greenhouse
+    org: guild
+  - name: 2U / edX
+    type: url
+    org: edx
+    url: "https://2u.com/careers/jobs/"
+  - name: Anthology
+    type: jobvite
+    org: anthology
+    url: "https://jobs.jobvite.com/anthology/jobs"
+  - name: PowerSchool
+    type: html
+    org: powerschool
+    url: "https://www.powerschool.com/company/careers/"
+  - name: Renaissance Learning
+    type: workday
+    org: renaissance
+    url: "https://renaissance.wd5.myworkdayjobs.com/en-US/Renaissance"
+  - name: DreamBox Learning
+    type: url
+    org: dreambox
+    url: "https://jobs.dayforcehcm.com/en-US/discoveryed/CANDIDATEPORTAL"
+  - name: Age of Learning
+    type: lever
+    org: aofl
+  - name: CourseHero
+    type: greenhouse
+    org: coursehero
