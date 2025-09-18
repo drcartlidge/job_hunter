@@ -1,0 +1,37 @@
+companies:
+  - name: Amplify
+    type: greenhouse
+    org: amplify
+  - name: Coursera
+    type: greenhouse
+    org: coursera
+  - name: Duolingo
+    type: greenhouse
+    org: duolingo
+  - name: Instructure
+    type: greenhouse
+    org: instructure
+  - name: Khan Academy
+    type: greenhouse
+    org: khanacademy
+  - name: IXL Learning
+    type: lever
+    org: ixl
+  - name: Quizlet
+    type: lever
+    org: quizlet
+  - name: Newsela
+    type: lever
+    org: newsela
+  - name: McGraw Hill
+    type: custom
+    org: workday
+  - name: Savvas Learning
+    type: html
+    url: "https://careers.savvas.com/jobs"
+  - name: Kahoot!
+    type: html
+    url: "https://kahoot.com/company/careers/"
+  - name: Nearpod
+    type: html
+    url: "https://nearpod.com/careers"

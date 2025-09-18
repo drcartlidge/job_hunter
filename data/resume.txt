@@ -1,0 +1,183 @@
+Matthew R. Cartlidge, Ph.D., GISP 							   
+ 
+Address: 12125 Derriford Ct. Woodbridge, VA 22192							           
+Phone: 571.241.5601
+Email: mrcartlidge@gmail.com										             
+LinkedIn: https://www.linkedin.com/in/matthew-cartlidge-ph-d-gisp-522a8b6b/	  
+
+					
+Professional Summary:  	
+
+PhD-trained data scientist and GISP-certified geospatial expert with 12+ years of experience in leading large-scale PK-12 research initiatives, managing RFP and compliance processes, supporting grant-funded initiatives, overseeing multi-million-dollar budgets, and developing innovative educational products adopted by schools. Designed and analyzed A/B and quasi-experimental tests to evaluate impact of educational interventions and digital feature updates. Skilled in Python, SQL, machine learning, and model deployment, with a proven record of optimizing school and office facilities, achieving $80M in facility cost avoidance, $30M in office expansion savings, and $18M in improved budget forecasts. Experienced in leading teams and translating complex data into actionable insights for executives and stakeholders. Passionate about applying data-driven solutions to solve real-world problems and drive organizational strategy. Motivated by creating data-driven tools that improve learning outcomes for young children, especially in foundational math and reading skills, early childhood education, and equitable access to pre-K learning opportunities.
+     	
+
+Technical Skills:		
+
+Educational Product Development: Designed and deployed AI LMS Automator, Chatbot for School Leaders, and Interactive Redistricting Solutions improving K–12 efficiency, engagement, and resource planning
+Programming & Data: Python, R, SQL, Pandas, SQLAlchemy, FastAPI, FAISS, LangChain, Beautiful Soup, playwright
+Cloud & ML: AWS, Jupyter Notebook, Amazon SageMaker, pytorch, scikit-learn, Docker, GitHub Actions
+Geospatial / GIS: ArcGIS Pro, ArcGIS Server, ArcGIS Enterprise, ArcGIS Online, ArcGIS Indoors, QGIS, LiDAR
+Statistics & Modeling: Econometric modeling (e.g., difference-in-differences, regression discontinuity), hierarchical linear modeling (linear-mixed effects), churn modeling, experimental/quasi-experimental designs (AB studies), survival analysis, uplift modeling, multivariate analysis, spatial regression, spatio-temporal modeling, geostatistics, KNN classification, recommender systems
+Visualization & APIs: Tableau, matplotlib, seaborn, Qlik, Power BI, Google Maps API, OpenAI
+Research & Publications: Peer-reviewed journals, national conference presentations
+
+Coding Samples Available	  			Geospatial Web Application Portfolio
+ 				 
+	 https://github.com/drcartlidge?tab=repositories	https://gis.pwcs.edu/portal/apps/sites/#/pwcs-planning
+		     
+   
+Professional Experience:	Lead Data Scientist, Supervisor of Planning and Capital Improvement Program, 09-2024 to Present
+			Prince William County Public Schools - 
+Work Schedule: Full-time
+·	Built predictive enrollment models for Early Childhood Special Education (ECSE), Head Start, and Virginia Preschool Initiative (VPI), helping inform resource allocation, staffing, and equitable access to pre-K services for over 3,000 students.
+·	Built automated ETL pipelines (Python + SQL) feeding predictive enrollment models, producing scenario-based forecasts that improved one-year budget accuracy by $18M.
+·	Designed and deployed predictive models and ML via CI/CD workflows using GitHub Actions, Docker, and AWS for student enrollment and resource planning, avoiding $80M in unnecessary construction costs.
+·	Proposed and executed research initiatives on emerging K–12 trends, positioning the district as a thought leader in data-driven education planning.
+·	Applied data science to user behavior modeling and engagement optimization in educational platforms, supporting decision-making on learner retention, usage patterns, and user segmentation.
+·	Developed school and central office space management and hoteling solution using ArcGIS Indoors, SQL ETL, and SSO integration, optimizing school/office utilization and avoiding $30M in expansion costs.
+·	Applied location-allocation optimization and predictive modeling to balance school attendance boundaries, reducing travel distances, transportation costs, and improving facility usage.
+·	Deployed cloud-based analytics and Python workflows (AWS) to scale predictive modeling across 95+ facilities.
+·	Served as Evaluation Committee Chair on multiple RFPs for educational services, leading vendor review, compliance checks, and recommendation of contract awards in alignment with district procurement policies.
+·	Developed and deployed educational technology products, including the LMS Automator (automating faculty workflows in Brightspace), embedding AI and data science capabilities into instructional and administrative workflows and several applications supporting schools (see ‘Geospatial Web Application Portfolio’ link above).
+·	Directly supported the Budget Office in school allocation processes, including coding of student data for specialized instruction, ensuring accurate and equitable funding distribution across 95+ schools.
+·	Built interactive dashboards and web mapping applications (Qlik, Tableau, ArcGIS Experience Builder) for real-time analytics and executive decision support.
+·	Led cross-functional collaboration with IT, Finance, Facilities, and Research & Accountability teams on data coherence initiatives, improving data quality for enterprise-wide decision-making using Snowflake and Qlik.
+·	Designed linear mixed-effects statistical model to evaluate student performance differences between AB groups; results are available on GitHub (“Modeling Student Performance”).
+·	Mentored and developed GIS/Data Analysts, fostering a high-performing, growth-oriented analytics team.
+·	Delivered executive presentations and facilitated town halls, translating complex analytics into actionable insights for diverse audiences.
+
+
+Data Scientist, Supervisor of Planning, 07-2013 to 09-2024
+			Prince William County Public Schools
+Work Schedule: Full-time
+·	Spearheaded school attendance area planning using location-allocation mapping optimization techniques
+·	Advised district, state, and federal (e.g., Department of Justice) education leaders on enrollment forecasting and redistricting decisions, informing compliance reviews and equity-focused policy decisions.
+·	Utilize and maintain geodemographic statistical models necessary to forecast school populations at 95+ schools
+·	Produce web mapping applications and story maps hosted on ArcGIS Online and Portal for ArcGIS
+·	Visualize data in dashboards (Tableau & ArcGIS Dashboards)
+·	Coordinated data collection efforts in the field leveraging enterprise geodatabase and ArcGIS Collector
+·	Perform network analyses using ArcGIS extension with intent of minimizing distances between patrons and facilities
+·	Write Python scripts to automate processing of spatial datasets and management of enterprise GIS
+·	Deploy and maintain Base ArcGIS Enterprise deployment
+·	Deploy and maintain enterprise geodatabase hosted in the cloud
+·	Manage cloud services on Amazon Web Services (AWS)
+·	Conduct site suitability analyses for capital improvement planning
+·	Manage conversion process of CADD data to spatial data with spatial referencing 
+·	Support the School Board with data-driven recommendations and cartographically sound maps related to expanding capital improvements, projected staffing/budgeting needs, and effective capacity utilization of 95+ schools
+·	Implement ArcGIS Indoors for administrative buildings to evaluate space utilization and to support implementation of hotel-designated spaces
+·	Query databases using SQL
+·	Conduct and publish statistical analyses on residential development data and k-12 student data
+·	Facilitated community-driven school attendance area boundary planning projects
+·	Manage the creation and distribution of accurate data and reports regarding planning and student data 
+·	Serve as a liaison among stakeholders (e.g., School Board, administration, Prince William County government, and community members)
+·	Make business presentations to School Board and host Town Hall meetings
+·	Coach and develop GIS/Data Analyst team members who are part of my growth-oriented team 
+
+
+Adjunct Faculty Member & Subject Matter Expert, 01-2022 to Present
+			Bootcamp GIS
+Work Schedule: Part-time
+·	Use best practices to design a project-based GIS training course
+·	Offer feedback, advise, and mentor students via one-on-one video calls
+
+
+Adjunct Faculty Member & Subject Matter Expert, 10-2016 to Present
+			Southern New Hampshire University
+Work Schedule: Part-time
+·	Collaborated with faculty teams on curriculum design aligned to accreditation standards and grant-funded program initiatives.
+·	Lead GIS, Geospatial Programming, Geostatistics, and Geography Courses online
+·	Migrate geospatial programming course from Python 2.x to 3.x
+·	Spearhead and lead the initiative to migrate all GIS courses from ArcMap to ArcGIS Pro
+·	Advise IT department on virtual machine specifications, based on my benchmark testing, to ensure a quality student experience with the software
+·	Offer troubleshooting support to IT department on the installation and configuration of Python, Jupyter Notebooks, PyCharm, and ArcGIS Pro.
+·	Teach with commercial GIS (ESRI) and open-source GIS (QGIS) platforms
+·	Review and amend course curriculum in coordination with Dean
+·	As a subject matter expert, collaborate with a team to develop new course offerings
+
+
+Independent Consultant, 09-2019 to Present
+			Enrollment Forecasting and Redistricting Solutions
+Work Schedule: Part-time
+·	Provided consultative analyses to education clients, aligning findings with grant requirements and funding opportunities; contributed to RFP responses and proposals supporting district-level decision-making.
+·	Supported business development by contributing to proposals and cultivating client relationships with district and state education agencies.
+·	Write Python 3 scripts to perform analyses on residential housing data
+·	Directed and conduct data analyses on residential property, as requested by clients
+·	Project k-12 student enrollment
+·	Conduct demographic studies related to k-12 student populations
+·	Leverage machine learning techniques to model big data (h20.ai, Amazon SageMaker, and S3) for the energy market (i.e., day-ahead market)
+
+
+Adjunct Faculty Member, 09-2015 to 09-2021
+			American Sentinel University
+Work Schedule: Part-time
+·	Lead Introductory-, Intermediate-, and Advanced-level GIS Courses Online
+·	Review and amend course curriculum in coordination with Dean
+
+
+Graduate Teaching Assistant, 08-2008 to 06-2013
+			University of Nebraska and Kansas State University
+Work Schedule: Part-time (20 hours per week for nine-month appointment)
+·	Led lecture for Physical Geography and Mapping Science in the 21st Century courses
+·	Collaborated with non-profit organization, Neighborworks, to manage a group of undergraduate students who surveyed and remotely collected GIS data on a decrepit and derelict neighborhood using mobile GIS. This enabled grant money to be best utilized and leveraged to improve the area and abate zoning ordinance violations. 
+·	Managed graduate teaching assistants who were in charge of instructing physical geography lab sections
+·	Section head for GIS lab
+·	Coached and developed students during office hours and provided additional explanation of material, proctored exams, and addressed grading questions
+
+Research Analyst, 08-2011 to 05-2013
+Heartland Center for Leadership Development
+Work Schedule: Part-time 
+·	Assisted in grant writing for public agencies, including rural school districts and municipalities, to secure funding for community development and educational initiatives
+·	Consulted with community leaders regarding community betterment strategies that served as community and economic development tools
+·	Perused existing policies and scholarly journals for the specific purpose of constantly improving the organization’s proprietary community betterment model
+·	Created, administered, and evaluated responses for online survey tools to gain a better understanding of the level of satisfaction residents experience from living in their community
+
+
+			GIS Specialist, 12-20Decem2006 to –09-202012
+			Kansas Department of Transportation
+Work Schedule: Part-time during academic year and full-time during summer months
+·	Updated city limit boundaries GIS database for municipal and state budgeting purposes  
+·	Developed a state-wide GIS database of Kansas under the Department of Homeland Security
+·	Updated digital imagery database by digitizing flight paths where historical aerial photos were taken 
+
+
+·	Conducted land survey of Interstate-70 for Kansas Department of Transportation
+
+Education:	Doctor of Philosophy in Geography    
+Graduation Date: August 2013, GPA 3.93 of maximum 4.0
+			School of Natural Resources
+			University of Nebraska, Lincoln, NE
+			Major: Geography with emphasis specialization in quantitative modeling and GIS
+
+	Master of Arts in Geography   
+Graduation Date: Summer 2010, GPA 3.75 of maximum 4.0
+			College of Arts and Sciences
+			Kansas State University, Manhattan, KS
+			Major: Geography with emphasis specialization in Cultural Geography
+			
+			Bachelor of Sciences in Geography    
+Graduation Date: Spring 2008, GPA 3.87 of maximum 4.0
+			College of Arts and Sciences
+			Fort Hays State University, Hays, KS
+			Major: Geography with specialization in Geographic Information Systems
+			Minor: College of Arts and Sciences, World Languages – Spanish
+			GIS certification 
+			International Studies Certificate 
+	
+	
+Prof. Organization	American Association of Geographers
+Membership:	Gamma Theta Upsilon
+	GIS Certification Institute
+
+
+Professional	Available upon request
+References:	
+
+	
+
+	
+
+	
+	
+	
+	
+
