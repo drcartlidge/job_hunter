@@ -1,6 +1,6 @@
 import requests
 from typing import List
-from main import Job
+from models import Job
 
 def scrape_workday(org: str, name: str) -> List[Job]:
     if name.lower().startswith("mcgraw"):

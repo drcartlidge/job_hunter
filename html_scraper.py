@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from typing import List
-from main import Job
+from models import Job
 
 def scrape_html(url: str, name: str, org: str = "") -> List[Job]:
     if "kahoot" in url.lower(): return scrape_kahoot(url, name)

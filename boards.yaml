@@ -1,7 +1,8 @@
 companies:
   - name: Amplify
-    type: greenhouse
+    type: workday
     org: amplify
+    url: "https://amplify.wd1.myworkdayjobs.com/Amplify_Careers"
   - name: Coursera
     type: greenhouse
     org: coursera
