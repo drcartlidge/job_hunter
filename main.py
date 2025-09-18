@@ -124,11 +124,12 @@ def rank_jobs_with_llm(jobs: List[Job], resume: str) -> List[Dict[str, Any]]:
 
     prompt = PromptTemplate.from_template("""
 You are a career-matching assistant. Compare this résumé to the job posting.
-Return JSON with keys:
-- match_score (0-100)
-- overlaps (bullet points)
-- gaps (bullet points)
-- rationale (2 sentences)
+
+Return ONLY valid JSON with keys:
+- match_score (0-100, integer)
+- overlaps (list of bullet points)
+- gaps (list of bullet points)
+- rationale (string, 1–2 sentences)
 - remote_eligible (true/false)
 
 Résumé:
@@ -138,15 +139,40 @@ Job (Company: {company} | Title: {title} | Location: {location}):
 {job}
 """)
 
-    chain = LLMChain(llm=llm, prompt=prompt)
+    chain = prompt | llm  # RunnableSequence replaces LLMChain
 
     results = []
     for job in jobs:
         try:
-            output = chain.run(resume=resume, company=job.company,
-                               title=job.title, location=job.location,
-                               job=job.description)
-            parsed = json.loads(output)
+            output = chain.invoke({
+                "resume": resume,
+                "company": job.company,
+                "title": job.title,
+                "location": job.location,
+                "job": job.description
+            })
+
+            # With ChatOpenAI, output is a ChatMessage — get the text
+            text = output.content if hasattr(output, "content") else str(output)
+
+            # --- new step: clean markdown fences ---
+            text = text.strip()
+            if text.startswith("```"):
+                # remove leading/trailing triple backticks & optional "json"
+                text = text.strip("`")
+                if text.lower().startswith("json"):
+                    text = text[4:].strip()
+                # also remove trailing ``` if still present
+                if text.endswith("```"):
+                    text = text[:-3].strip()
+
+            try:
+                parsed = json.loads(text)
+            except Exception as e:
+                print(f"[ERROR] JSON parse failed for {job.title} @ {job.company}: {e}")
+                print("Raw output:\n", text)
+                continue  # skip this job
+
             results.append({
                 "company": job.company,
                 "title": job.title,
@@ -160,6 +186,7 @@ Job (Company: {company} | Title: {title} | Location: {location}):
             })
         except Exception as e:
             print(f"[ERROR] LLM failed for {job.title} @ {job.company}: {e}")
+
     return results
 
 
@@ -249,9 +276,9 @@ def main():
     rows = rank_jobs_with_llm(filtered, resume)
     print("LLM rows:", rows)
     # OR safer fallback (recommended):
-    if not rows:
-        print("[WARN] Falling back to baseline filtered jobs")
-        rows = filtered
+    #if not rows:
+     #   print("[WARN] Falling back to baseline filtered jobs")
+      #  rows = filtered
     save_results(rows)
 
     if os.getenv("EMAIL_FROM") and os.getenv("EMAIL_TO"):
