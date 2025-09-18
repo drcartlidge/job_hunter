@@ -86,16 +86,29 @@ def scrape_greenhouse(org: str, name: str) -> List[Job]:
 # Lever scraper
 # -------------------------
 def scrape_lever(org: str, name: str) -> List[Job]:
+    def safe_join(value):
+        """Normalize Lever fields into a comma-separated string."""
+        if isinstance(value, list):
+            return ", ".join([str(x) for x in value if x])
+        return str(value) if value else ""
+
     jobs = []
     url = f"https://api.lever.co/v0/postings/{org}?mode=json"
     try:
         r = requests.get(url, timeout=30)
         r.raise_for_status()
         for j in r.json():
+            categories = j.get("categories", {})
+
+            # normalize each category field
+            location = safe_join(categories.get("location"))
+            team = safe_join(categories.get("team"))
+            commitment = safe_join(categories.get("commitment"))
+
             jobs.append(Job(
                 company=name,
                 title=j.get("text", ""),
-                location=", ".join(j.get("categories", {}).values()),
+                location=", ".join([x for x in [location, team, commitment] if x]),
                 url=j.get("hostedUrl", ""),
                 description=j.get("descriptionPlain", ""),
                 raw=j
@@ -103,6 +116,7 @@ def scrape_lever(org: str, name: str) -> List[Job]:
     except Exception as e:
         print(f"[ERROR] Lever scrape failed for {name}: {e}")
     return jobs
+
 
 
 # -------------------------

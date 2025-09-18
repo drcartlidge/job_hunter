@@ -17,11 +17,11 @@ companies:
     org: khanacademy
   - name: IXL Learning
     type: greenhouse
-    org: ixl
+    org: ixllearning
   - name: Quizlet
-    type: lever
+    type: url
     org: quizlet
-    #url: "https://quizlet.com/careers#joinquizlet"
+    url: "https://quizlet.com/careers"
   - name: Newsela
     type: greenhouse
     org: newsela
