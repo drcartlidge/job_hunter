@@ -10,29 +10,30 @@ companies:
     type: greenhouse
     org: duolingo
   - name: Instructure
-    type: greenhouse
+    type: lever
     org: instructure
   - name: Khan Academy
     type: greenhouse
     org: khanacademy
   - name: IXL Learning
-    type: lever
+    type: greenhouse
     org: ixl
   - name: Quizlet
     type: lever
     org: quizlet
+    #url: "https://quizlet.com/careers#joinquizlet"
   - name: Newsela
-    type: lever
+    type: greenhouse
     org: newsela
   - name: McGraw Hill
     type: custom
     org: workday
   - name: Savvas Learning
     type: html
-    url: "https://careers.savvas.com/jobs"
+    url: "https://jobs.dayforcehcm.com/en-US/k12l/CANDIDATEPORTAL"
   - name: Kahoot!
     type: html
-    url: "https://kahoot.com/company/careers/"
+    url: "https://kahoot.com/open-positions/"
   - name: Nearpod
     type: html
     url: "https://nearpod.com/careers"
