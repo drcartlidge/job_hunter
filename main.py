@@ -232,7 +232,7 @@ def make_markdown(rows: List[Dict[str, Any]]) -> str:
 # Email digest
 # -------------------------
 def send_email_digest(rows: List[Dict[str, Any]]):
-    top = sorted(rows, key=lambda x: x["match_score"], reverse=True)[:10]
+    top = sorted(rows, key=lambda x: x["match_score"], reverse=True)[:30]
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = "Daily EdTech Data Science Matches"
