@@ -71,3 +71,7 @@ companies:
   - name: CourseHero
     type: greenhouse
     org: coursehero
+  - name: turnitin
+    type: url
+    org: turnitin
+    url: "https://careers.smartrecruiters.com/TurnitinLLC"
