@@ -21,4 +21,14 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ONLY_US_ROLES: ${{ secrets.ONLY_US_ROLES }}
+          MIN_MATCH_SCORE: ${{ secrets.MIN_MATCH_SCORE }}
         run: python main.py

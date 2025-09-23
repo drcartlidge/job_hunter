@@ -17,6 +17,20 @@ from models import Job
 
 load_dotenv()  # load .env config
 
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+EMAIL_FROM = os.getenv("EMAIL_FROM")
+EMAIL_TO = os.getenv("EMAIL_TO")
+SMTP_HOST = os.getenv("SMTP_HOST")
+SMTP_PORT = os.getenv("SMTP_PORT")  # string, cast later if needed
+SMTP_USER = os.getenv("SMTP_USER")
+SMTP_PASS = os.getenv("SMTP_PASS")
+ONLY_US_ROLES = os.getenv("ONLY_US_ROLES")  # e.g., "true"/"false"
+MIN_MATCH_SCORE = os.getenv("MIN_MATCH_SCORE")  # string, cast later if needed
+
+# Optional: convert certain vars to expected types
+SMTP_PORT = int(SMTP_PORT) if SMTP_PORT else None
+MIN_MATCH_SCORE = float(MIN_MATCH_SCORE) if MIN_MATCH_SCORE else None
+ONLY_US_ROLES = ONLY_US_ROLES.lower() == "true" if ONLY_US_ROLES else False
 
 # -------------------------
 # Job dataclass
