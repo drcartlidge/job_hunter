@@ -4,12 +4,12 @@ $Branch = "main"  # update if your repo uses 'master'
 
 # --- 1. Backup the repo ---
 Write-Host "Cloning backup..."
-git clone --mirror $RepoUrl job_hunter-backup
+git clone --mirror $RepoUrl job_hunter-backup-env-example
 
 # --- 2. Clone fresh working copy ---
 Write-Host "Cloning working copy..."
-git clone $RepoUrl job_hunter-clean
-Set-Location job_hunter-clean
+git clone $RepoUrl job_hunter-clean-env-example
+Set-Location job_hunter-clean-env-example
 
 # --- 3. Ensure git-filter-repo is installed ---
 if (-not (Get-Command git-filter-repo -ErrorAction SilentlyContinue)) {
@@ -17,22 +17,19 @@ if (-not (Get-Command git-filter-repo -ErrorAction SilentlyContinue)) {
     pip install git-filter-repo
 }
 
-# --- 4. Scrub sensitive files from history ---
-Write-Host "Removing .env and .zip files from history..."
-git filter-repo --invert-paths --path .env --path-glob '*.zip'
+# --- 4. Scrub .env.example from history ---
+Write-Host "Removing .env.example from history..."
+git filter-repo --invert-paths --path .env.example
 
-# --- 5. Update .gitignore ---
-Write-Host "Updating .gitignore..."
-@"
-.env
-*.zip
-"@ | Out-File -FilePath ".gitignore" -Encoding UTF8
+# --- 5. Update .gitignore to ignore .env.example if needed ---
+Write-Host "Ensuring .env.example is ignored..."
+".env.example" | Out-File -FilePath ".gitignore" -Encoding UTF8 -Append
 git add .gitignore
-git commit -m "Ignore .env and zip files"
+git commit -m "Ignore .env.example"
 
 # --- 6. Push cleaned history back ---
 Write-Host "Force pushing cleaned repo to origin..."
 git push origin --force --all
 git push origin --force --tags
 
-Write-Host "✅ Cleanup complete. .env and .zip files removed from history. Now rotate any exposed keys!"
+Write-Host "✅ Cleanup complete. .env.example removed from history."
