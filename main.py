@@ -245,13 +245,18 @@ def make_markdown(rows: List[Dict[str, Any]]) -> str:
 # -------------------------
 # Email digest
 # -------------------------
+from email.utils import formataddr
+
 def send_email_digest(rows: List[Dict[str, Any]]):
     top = sorted(rows, key=lambda x: x["match_score"], reverse=True)[:30]
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = "Daily EdTech Data Science Matches"
-    msg["From"] = os.getenv("EMAIL_FROM")
-    msg["To"] = os.getenv("EMAIL_TO")
+    sender_email = os.getenv("EMAIL_FROM")  # should be plain email only
+    recipient_email = os.getenv("EMAIL_TO")
+
+    msg["From"] = formataddr(("Mevo Plus User", sender_email))
+    msg["To"] = recipient_email
 
     html_items = "".join([
         f"<li><b>{r['title']}</b> — {r['company']} ({r.get('location') or 'N/A'}) "
