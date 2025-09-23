@@ -27,7 +27,7 @@ SMTP_PASS = os.getenv("SMTP_PASS")
 ONLY_US_ROLES = os.getenv("ONLY_US_ROLES")  # e.g., "true"/"false"
 MIN_MATCH_SCORE = os.getenv("MIN_MATCH_SCORE")  # string, cast later if needed
 
-# Optional: convert certain vars to expected types
+# Convert certain vars to expected types
 SMTP_PORT = int(SMTP_PORT) if SMTP_PORT else None
 MIN_MATCH_SCORE = float(MIN_MATCH_SCORE) if MIN_MATCH_SCORE else None
 ONLY_US_ROLES = ONLY_US_ROLES.lower() == "true" if ONLY_US_ROLES else False
