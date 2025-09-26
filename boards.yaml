@@ -1,7 +1,6 @@
 companies:
   - name: Amplify
     type: workday
-    org: amplify
     url: "https://amplify.wd1.myworkdayjobs.com/Amplify_Careers"
   - name: Coursera
     type: greenhouse
@@ -19,17 +18,17 @@ companies:
     type: greenhouse
     org: ixllearning
   - name: Quizlet
-    type: url
+    type: html
     org: quizlet
     url: "https://quizlet.com/careers"
   - name: Newsela
     type: greenhouse
     org: newsela
   - name: McGraw Hill
-    type: custom
-    org: workday
+    type: mcgrawhill
+    url_api: "https://careers.mheducation.com/api/jobs?sortBy=relevance&descending=false&internal=false"
   - name: Savvas Learning
-    type: html
+    type: savvas
     url: "https://jobs.dayforcehcm.com/en-US/k12l/CANDIDATEPORTAL"
   - name: Kahoot!
     type: html
@@ -39,18 +38,17 @@ companies:
     url: "https://nearpod.com/careers"
 # Newly added
   - name: Chegg
-    type: workday
-    org: chegg
+    type: html
     url: "https://osv-chegg.wd5.myworkdayjobs.com/en-US/Chegg"
   - name: Guild Education
     type: greenhouse
     org: guild
   - name: 2U / edX
-    type: url
+    type: html
     org: edx
     url: "https://2u.com/careers/jobs/"
   - name: Anthology
-    type: jobvite
+    type: html
     org: anthology
     url: "https://jobs.jobvite.com/anthology/jobs"
   - name: PowerSchool
@@ -58,11 +56,10 @@ companies:
     org: powerschool
     url: "https://www.powerschool.com/company/careers/"
   - name: Renaissance Learning
-    type: workday
-    org: renaissance
+    type: html
     url: "https://renaissance.wd5.myworkdayjobs.com/en-US/Renaissance"
   - name: DreamBox Learning
-    type: url
+    type: html
     org: dreambox
     url: "https://jobs.dayforcehcm.com/en-US/discoveryed/CANDIDATEPORTAL"
   - name: Age of Learning
@@ -72,6 +69,6 @@ companies:
     type: greenhouse
     org: coursehero
   - name: turnitin
-    type: url
+    type: html
     org: turnitin
     url: "https://careers.smartrecruiters.com/TurnitinLLC"

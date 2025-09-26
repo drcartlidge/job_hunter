@@ -141,8 +141,17 @@ from workday_scraper import scrape_workday
 # -------------------------
 # HTML scraper (dispatcher)
 # -------------------------
-from html_scraper import scrape_html
+from html_scraper import scrape_html, scrape_savvas
 
+# -------------------------
+# Icims scraper (dispatcher)
+# -------------------------
+from icims_scraper import scrape_icims
+
+# -------------------------
+# McGraw Hill scraper (dispatcher)
+# -------------------------
+from mcgraw_scraper import scrape_mcgrawhill
 
 # -------------------------
 # Rank jobs with LLM
@@ -248,7 +257,7 @@ def make_markdown(rows: List[Dict[str, Any]]) -> str:
 from email.utils import formataddr
 
 def send_email_digest(rows: List[Dict[str, Any]]):
-    top = sorted(rows, key=lambda x: x["match_score"], reverse=True)[:30]
+    top = sorted(rows, key=lambda x: x["match_score"], reverse=True)[:75]
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = "Daily EdTech Data Science Matches"
@@ -290,8 +299,37 @@ def main():
 
     resume = load_resume()
     all_jobs: List[Job] = []
+    qc_report = {}  # NEW
 
     for b in boards:
+        name, typ = b["name"], b["type"]
+        org = b.get("org", "")
+        jobs = []
+
+        if typ == "greenhouse":
+            jobs = scrape_greenhouse(org, name)
+        elif typ == "lever":
+            jobs = scrape_lever(org, name)
+        elif typ == "workday":
+            jobs = scrape_workday(b.get("url", ""), name)
+        elif typ == "icims":
+            jobs = scrape_icims(b.get("url", ""), name)
+        elif typ == "html":
+            jobs = scrape_html(b.get("url", ""), name, org)
+        elif typ == "mcgrawhill":  # <-- NEW
+            jobs = scrape_mcgrawhill(b.get("url_api", ""), name)
+        elif typ == "savvas":
+            jobs = scrape_savvas(b.get("url", ""), name)
+
+        all_jobs.extend(jobs)
+        qc_report[name] = len(jobs)
+
+    # --- QC check ---
+    for company, count in qc_report.items():
+        if count == 0:
+            print(f"[QC WARNING] {company} returned 0 jobs! Check scraper or URL.")
+
+    """for b in boards:
         name, typ = b["name"], b["type"]
         org = b.get("org", "")
         if typ == "greenhouse":
@@ -301,7 +339,7 @@ def main():
         elif typ == "custom":
             all_jobs.extend(scrape_workday(org, name))
         elif typ == "html":
-            all_jobs.extend(scrape_html(b.get("url", ""), name, org))
+            all_jobs.extend(scrape_html(b.get("url", ""), name, org))"""
 
     filtered = [j for j in all_jobs if baseline_title_filter(j)]
     print(f"[INFO] {len(filtered)} jobs passed baseline filter out of {len(all_jobs)}")
