@@ -10,3 +10,4 @@ tqdm>=4.66.4
 tenacity>=8.2.3
 numpy>=1.26.4
 beautifulsoup4>=4.12.3
+langchain-core>=0.2
