@@ -11,7 +11,7 @@ from email.mime.text import MIMEText
 
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from langchain.chains.llm import LLMChain
 
 from models import Job
 
